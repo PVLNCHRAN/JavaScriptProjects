@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Change Color </title>
+    <style>
+        #color{
+            border: 1px solid transparent;
+            width: 50%;
+            height:500px;
+            margin: auto;
+            border-radius: 20px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h4 class="display-5 text-center mt-4" id="text">Change Color</h4>
+        <div id="color" class="p-3 my-5">
+            <button type='submit' class="btn btn-primary" onclick="changeColor()">Click It</button>
+        </div>
+    </div>
+    <script>
+        var count= 0;
+        var colorArray = ["red","blue","green","orange","pink","yellow","#283618"];
+        function changeColor(){
+            
+            var text = document.getElementById("text");
+            var color = document.getElementById("color");
+
+            if(count < colorArray.length){
+                text.style.color = colorArray[count];
+                color.style.backgroundColor = colorArray[count]; 
+            }
+            else{
+                text.style.color = "black";
+                color.style.backgroundColor = "white"
+                count = -1
+            }
+            count++ 
+        }
+    </script>
+</body>
+</html>
+
+
+
+
